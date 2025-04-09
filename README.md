@@ -1,50 +1,108 @@
-# Welcome to your Expo app 👋
+# 🍲 Meal Explorer App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile desenvolvido com **React Native**, **TypeScript** e **Expo**, que consome uma API pública para exibir receitas culinárias aleatórias. O usuário pode visualizar o nome, imagem, modo de preparo da receita e atualizar para uma nova receita com um clique.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Funcionalidades
 
-   ```bash
-   npm install
-   ```
+- Busca de receita aleatória na API [TheMealDB](https://www.themealdb.com/)
+- Exibição de imagem, nome e instruções da receita
+- Botão para carregar uma nova receita
+- Estilização personalizada com cores suaves
+- Layout responsivo com rolagem
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## 🚀 Tecnologias Utilizadas
 
-In the output, you'll find options to open the app in a
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
+- [React Navigation + Expo Router](https://expo.github.io/router/docs)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📁 Estrutura de Pastas
+```
+📁 .expo                  # Configurações internas do Expo
+📁 types                 # Tipagens globais
+│  └── router.d.ts       # Definições de tipos de rota
+📁 web/cache             # Cache da aplicação web
+│  └── production
+│      └── favicon-48.png
+📄 devices.json          # Arquivo de configuração de dispositivos
+📄 README.md             # Documentação do projeto
 
-## Get a fresh project
+📁 app                   # Arquivos principais da aplicação
+│  ├── _layout.tsx       # Layout geral
+│  ├── index.tsx         # Página inicial (exibe a receita)
+│  ├── +not-found.tsx    # Tela de erro 404
+│  └── (tabs)            # Abas da navegação
+│      ├── _layout.tsx
+│      ├── explore.tsx
+│      └── index.tsx
 
-When you're ready, run:
+📁 assets                # Recursos estáticos
+│  ├── fonts             # Fontes personalizadas
+│  └── images            # Imagens do app (se houver)
 
-```bash
-npm run reset-project
+📁 components            # Componentes reutilizáveis
+│  ├── __tests__         # Testes dos componentes
+│  └── ui                # Componentes de interface
+│      ├── Collapsible.tsx
+│      ├── ExternalLink.tsx
+│      ├── HapticTab.tsx
+│      ├── HelloWave.tsx
+│      ├── ParallaxScrollView.tsx
+│      ├── ThemedText.tsx
+│      └── ThemedView.tsx
+
+📁 constants             # Constantes globais
+│  └── Colors.ts         # Paleta de cores
+
+📁 hooks                 # Hooks personalizados
+│  ├── useColorScheme.ts
+│  ├── useColorScheme.web.ts
+│  └── useThemeColor.ts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🔌 Integração com a API
 
-To learn more about developing your project with Expo, look at the following resources:
+- URL utilizada: `https://www.themealdb.com/api/json/v1/1/random.php`
+- Método: `GET`
+- Biblioteca: `axios`
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🛠️ Como Rodar o Projeto
 
-Join our community of developers creating universal apps.
+1. Clone o repositório:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+`git clone https://github.com/seu-usuario/seu-repositorio.git`
+   
+2. Instale as dependências:
+```
+npm install
+```
+
+3. Rode o projeto:
+```
+npx expo start
+```
+
+## 📌 Observações
+* O projeto usa o Expo Router para navegação.
+
+* O layout inicial é exibido via index.tsx dentro da pasta app.
+
+* Ao iniciar, o app já carrega uma receita automaticamente.
+
+## 📄 Licença
+Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e distribuir.
+
+Feito com 💖 por Alessandra ✨
+
